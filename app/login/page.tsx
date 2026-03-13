@@ -35,7 +35,7 @@ export default function LoginPage() {
                         Welcome Back
                     </h1>
                     <p className="text-gray mt-2">
-                        Login to your PizzaParlor account
+                        Login to your PizzaGarage account
                     </p>
                 </div>
 

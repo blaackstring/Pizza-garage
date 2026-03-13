@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Terms & Privacy Policy",
-    description: "Read our Terms of Service and Privacy Policy for PizzaParlor.",
+    description: "Read our Terms of Service and Privacy Policy for PizzaGarage.",
 };
 
 export default function TermsPage() {
@@ -30,7 +30,7 @@ export default function TermsPage() {
                             </h2>
                             <div className="space-y-4 text-gray leading-relaxed">
                                 <p>
-                                    Welcome to PizzaParlor. By accessing or using our website and services, you agree
+                                    Welcome to PizzaGarage. By accessing or using our website and services, you agree
                                     to be bound by these Terms of Service. Please read them carefully.
                                 </p>
 
@@ -72,7 +72,7 @@ export default function TermsPage() {
                             </h2>
                             <div className="space-y-4 text-gray leading-relaxed">
                                 <p>
-                                    PizzaParlor respects your privacy. This Privacy Policy explains how we collect, use,
+                                    PizzaGarage respects your privacy. This Privacy Policy explains how we collect, use,
                                     and protect your personal information.
                                 </p>
 
@@ -97,8 +97,8 @@ export default function TermsPage() {
                                 <h3 className="font-heading text-lg font-bold text-dark mt-6">4. Contact</h3>
                                 <p>
                                     For any privacy-related questions, please email us at{" "}
-                                    <a href="mailto:privacy@pizzaparlor.com" className="text-orange hover:underline">
-                                        privacy@pizzaparlor.com
+                                    <a href="mailto:privacy@PizzaGarage.com" className="text-orange hover:underline">
+                                        privacy@PizzaGarage.com
                                     </a>
                                     .
                                 </p>

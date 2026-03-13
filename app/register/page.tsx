@@ -41,7 +41,7 @@ export default function RegisterPage() {
                         Create Account
                     </h1>
                     <p className="text-gray mt-2">
-                        Join PizzaParlor and start ordering!
+                        Join PizzaGarage and start ordering!
                     </p>
                 </div>
 

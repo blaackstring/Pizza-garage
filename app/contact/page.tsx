@@ -20,7 +20,7 @@ export default function ContactPage() {
     const contactInfo = [
         { icon: <FiMapPin size={24} />, title: "Visit Us", detail: "401 Broadway, 24th Floor\nNew York, NY 10013" },
         { icon: <FiPhone size={24} />, title: "Call Us", detail: "1-800-222-000\n+1 234 567 8910" },
-        { icon: <FiMail size={24} />, title: "Email Us", detail: "hello@pizzaparlor.com\nsupport@pizzaparlor.com" },
+        { icon: <FiMail size={24} />, title: "Email Us", detail: "hello@PizzaGarage.com\nsupport@PizzaGarage.com" },
         { icon: <FiClock size={24} />, title: "Opening Hours", detail: "Mon – Sun\n9:00 AM – 11:30 PM" },
     ];
 
@@ -124,7 +124,7 @@ export default function ContactPage() {
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            title="PizzaParlor Location"
+                            title="PizzaGarage Location"
                         />
                     </div>
                 </div>

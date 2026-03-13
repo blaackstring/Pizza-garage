@@ -21,7 +21,7 @@ const faqs = [
     },
     {
         question: "Do you cater for events and parties?",
-        answer: "Absolutely! We offer catering for events of all sizes. Please contact us at hello@pizzaparlor.com or call 1-800-222-000 for a custom catering quote.",
+        answer: "Absolutely! We offer catering for events of all sizes. Please contact us at hello@PizzaGarage.com or call 1-800-222-000 for a custom catering quote.",
     },
     {
         question: "Can I customize my pizza?",
@@ -45,7 +45,7 @@ const faqs = [
     },
     {
         question: "How do I contact customer support?",
-        answer: "You can reach us via email at support@pizzaparlor.com, phone at 1-800-222-000, or through our Contact Us page.",
+        answer: "You can reach us via email at support@PizzaGarage.com, phone at 1-800-222-000, or through our Contact Us page.",
     },
 ];
 

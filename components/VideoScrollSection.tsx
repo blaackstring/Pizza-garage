@@ -66,7 +66,7 @@ export default function VideoScrollSection() {
       frame: frameCount - 1,
       snap: "frame",
       ease: "power1.inOut", // Adding a soft ease makes acceleration/deceleration between frames look smoother
-      onUpdate: () => requestAnimationFrame(render)
+      onUpdate: () => { requestAnimationFrame(render); }
     });
 
     return () => {

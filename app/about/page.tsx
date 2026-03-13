@@ -8,7 +8,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "About Us",
-    description: "Learn about PizzaParlor — our story, mission, and the passionate team behind the best pizza in town.",
+    description: "Learn about PizzaGarage — our story, mission, and the passionate team behind the best pizza in town.",
 };
 
 const team = [
@@ -36,7 +36,7 @@ export default function AboutPage() {
                 <div className="relative z-10">
                     <span className="section-subtitle text-orange-light">Our Story</span>
                     <h1 className="font-heading text-5xl md:text-6xl font-bold text-white mt-3">
-                        About <span className="text-orange">PizzaParlor</span>
+                        About <span className="text-orange">PizzaGarage</span>
                     </h1>
                     <p className="text-gray-light mt-4 max-w-xl mx-auto text-lg">
                         From a small family kitchen in New York to your favorite pizza destination.

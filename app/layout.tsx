@@ -33,11 +33,11 @@ const greatVibes = Great_Vibes({
 // ============================================================
 export const metadata: Metadata = {
   title: {
-    default: "PizzaParlor — The True Taste of Italy | Order Online",
-    template: "%s | PizzaParlor",
+    default: "PizzaGarage — The True Taste of Italy | Order Online",
+    template: "%s | PizzaGarage",
   },
   description:
-    "Order delicious hand-made pizzas, burgers, desserts & more from PizzaParlor. Fast delivery, fresh ingredients, and unbeatable taste. Order online now!",
+    "Order delicious hand-made pizzas, burgers, desserts & more from PizzaGarage. Fast delivery, fresh ingredients, and unbeatable taste. Order online now!",
   keywords: [
     "pizza delivery",
     "order pizza online",
@@ -47,11 +47,11 @@ export const metadata: Metadata = {
     "best pizza near me",
   ],
   openGraph: {
-    title: "PizzaParlor — The True Taste of Italy",
+    title: "PizzaGarage — The True Taste of Italy",
     description: "Hand-crafted pizzas with the freshest ingredients, delivered to your door.",
     type: "website",
     locale: "en_US",
-    siteName: "PizzaParlor",
+    siteName: "PizzaGarage",
   },
 };
 
