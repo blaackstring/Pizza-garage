@@ -1,65 +1,130 @@
+"use client";
+// ============================================================
+// Home Page — Hero, Categories, Why Choose Us, Best Pizzas,
+// Offers & Deals, Testimonials, Newsletter CTA.
+// ============================================================
+
+import Link from "next/link";
 import Image from "next/image";
+import {
+  FiArrowRight,
+  FiTruck,
+  FiClock,
+  FiAward,
+  FiHeart,
+  FiStar,
+} from "react-icons/fi";
+import {
+  getBestSellers,
+  getOffers,
+  testimonials,
+} from "@/data/products";
+import ProductCard from "@/components/ProductCard";
+import InteractivePizzaSection from "@/components/InteractivePizzaSection";
+import IceCreamSection from "@/components/IceCreamSection";
+import VideoScrollSection from "@/components/VideoScrollSection";
+import LocationSection from "@/components/LocationSection";
+
+
+
+// Category data for the strip
+const categories = [
+  { name: "Pizza", emoji: "🍕", href: "/menu?category=pizza" },
+  { name: "Burgers", emoji: "🍔", href: "/menu?category=fastfood" },
+  { name: "Desserts", emoji: "🍰", href: "/menu?category=desserts" },
+  { name: "Drinks", emoji: "🥤", href: "/menu?category=drinks" },
+  { name: "Fries", emoji: "🍟", href: "/menu?category=fastfood" },
+  { name: "Salads", emoji: "🥗", href: "/menu?category=pizza" },
+];
+
+const whyChooseUs = [
+  {
+    icon: <FiAward size={32} />,
+    title: "Premium Quality",
+    desc: "Only the freshest, hand-picked ingredients sourced from premium local and Italian suppliers.",
+  },
+  {
+    icon: <FiTruck size={32} />,
+    title: "Fast Delivery",
+    desc: "Hot pizza at your doorstep in under 30 minutes. Guaranteed freshness on every order.",
+  },
+  {
+    icon: <FiClock size={32} />,
+    title: "Open Late",
+    desc: "Craving late-night pizza? We're open 9 AM – 11:30 PM, seven days a week.",
+  },
+  {
+    icon: <FiHeart size={32} />,
+    title: "Made with Love",
+    desc: "Every pizza is hand-crafted by our expert chefs with passion and decades of experience.",
+  },
+];
 
 export default function Home() {
+  const bestSellers = getBestSellers();
+  const offers = getOffers();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* ═══════════════════ HERO — Pizzao Style ═══════════════════ */}
+      <section className="hero-pizzao ">
+        {/* Decorative floating ingredients */}
+        <div className="hero-deco hero-deco--tomato-tl scale-200" aria-hidden="true">
+          <Image src="/images/tomatoes.webp" alt="" width={480} height={480} className="hero-deco-img" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="hero-deco hero-deco--chili-left scale-300 rotate-34" aria-hidden="true">
+          <Image src="/images/chilli.png" alt="" width={480} height={480} className="hero-deco-img" />
         </div>
-      </main>
-    </div>
+        <div className="hero-deco hero-deco--pepper-right scale-300 rotate-334" aria-hidden="true">
+          <Image src="/images/chilli.png" alt="" width={480} height={480} className="hero-deco-img hero-deco-flip" />
+        </div>
+        <div className="hero-deco hero-deco--tomato-br scale-200" aria-hidden="true">
+          <Image src="/images/tomatoes.webp" alt="" width={480} height={480} className="hero-deco-img" />
+        </div>
+
+        {/* Hero text */}
+        <div className="hero-text-container">
+          <p className="hero-script-text">Original</p>
+          <h1 className="hero-main-text">Italian</h1>
+        </div>
+
+        {/* Rotating pizza */}
+        <div className="hero-pizza-wrapper">
+          <Image
+            src="/images/hero_section_pizza.webp"
+            alt="Delicious Italian pizza rotating"
+            width={700}
+            height={700}
+            priority
+            className="hero-pizza-img"
+          />
+          {/* Today Offer badge */}
+          <div className="hero-today-offer">
+            <span>Today</span>
+            <span>Offer</span>
+          </div>
+        </div>
+
+        {/* Order button */}
+        <Link href="/menu" className="hero-order-btn">
+          <span className="arrow-circle">
+            <FiArrowRight size={16} />
+          </span>
+          Order
+        </Link>
+      </section>
+
+      {/* ═══════════════════ INTERACTIVE PIZZA SECTION ═══════════════════ */}
+      <InteractivePizzaSection />
+
+      {/* ═══════════════════ ICE CREAM SECTION ═══════════════════ */}
+      <IceCreamSection />
+
+      {/* ═══════════════════ VIDEO SCROLL SECTION ═══════════════════ */}
+      <VideoScrollSection />
+
+      {/* ═══════════════════ LOCATION SECTION ═══════════════════ */}
+      <LocationSection />
+    </>
   );
 }
